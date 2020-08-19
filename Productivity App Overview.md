@@ -60,3 +60,32 @@
 * Profile info
 
  
+
+## Classes
+
+* **SupportFile:**
+
+  * String text;
+
+    
+
+* **Projects:**
+
+  * List<Task> tasks;
+  * List<SupportFile> supportFiles;
+  * String projectID;
+  * String projectName;
+  * Date deadline
+  * Date reminder
+
+
+
+* **Task:**
+  * List<Task> tasks;
+  * String note;
+  * Date timeToComplete;
+  * bool completed;
+  * String repeats;
+  * Date deadline;
+  * Date reminder;
+

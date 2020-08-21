@@ -1,29 +1,9 @@
 import 'package:flutter/material.dart';
-
-// Colour Codes
-// Ivory - 0xFFF4EAE6
-// Coral - 0xFFE57F84
-// Misty Blue - 0xFF2F5061
+import 'package:ProductivityApp/models/global.dart';
 
 void main() {
   runApp(MyApp());
 }
-
-const MaterialColor ivory = const MaterialColor(
-  0xFFF4EAE6,
-  const <int, Color>{
-    50: const Color(0xFFF4EAE6),
-    100: const Color(0xFFF4EAE6),
-    200: const Color(0xFFF4EAE6),
-    300: const Color(0xFFF4EAE6),
-    400: const Color(0xFFF4EAE6),
-    500: const Color(0xFFF4EAE6),
-    600: const Color(0xFFF4EAE6),
-    700: const Color(0xFFF4EAE6),
-    800: const Color(0xFFF4EAE6),
-    900: const Color(0xFFF4EAE6),
-  },
-);
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -32,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Productivity App',
       theme: ThemeData(
-        primarySwatch: ivory,
+        primarySwatch: Colors.blue,
       ),
       home: MyHomePage(title: 'Productivity App'),
     );
@@ -61,27 +41,46 @@ class _MyHomePageState extends State<MyHomePage> {
               TabBarView(
                 children: [
                   new Container(
-                    color: const Color(0xFF2F5061),
+                    color: mistyblue,
                   ),
                   new Container(
-                   color: const Color(0xFF2F5061),
+                    color: mistyblue,
                   ),
                   new Container(
-                    color: const Color(0xFF2F5061),
+                    color: mistyblue,
                   ),
                 ],
               ),
               Container(
                 height: 200,
+                padding: EdgeInsets.only(left: 40),
                 decoration: BoxDecoration(
-                    color: const Color(0xFFF4EAE6),
+                    color: ivory,
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(50),
                       bottomRight: Radius.circular(50),
                     )),
-              )
+                child: Row(
+                  children: <Widget>[
+                    Text(
+                      "Intray",
+                      style: intrayTitleStyle,
+                    ),
+                    Container(),
+                  ],
+                ),
+              ),
+              Container(
+                height: 70,
+                width: 70,
+                margin: EdgeInsets.only(top: 165, left: MediaQuery.of(context).size.width*0.5-35),
+                child: FloatingActionButton(
+                  child: Icon(Icons.add, size: 70,),
+                  backgroundColor: coral,
+                  onPressed: (){},
+                ),
+              ),
             ]),
-            // appBar: TabBar(
             appBar: AppBar(
               elevation: 0,
               title: new TabBar(
@@ -96,13 +95,15 @@ class _MyHomePageState extends State<MyHomePage> {
                     icon: new Icon(Icons.dehaze),
                   ),
                 ],
-                labelColor: const Color(0xFFE57F84),
-                unselectedLabelColor: const Color(0xFFF4EAE6),
+                labelColor: coral,
+                unselectedLabelColor: coral,
                 indicatorSize: TabBarIndicatorSize.label,
                 indicatorPadding: EdgeInsets.all(5.0),
+                indicatorColor: mistyblue,
               ),
+              backgroundColor: ivory,
             ),
-            backgroundColor: const Color(0xFFF4EAE6),
+            backgroundColor: ivory,
           ),
         ),
       ),

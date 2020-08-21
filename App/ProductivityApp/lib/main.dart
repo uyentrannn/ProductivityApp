@@ -71,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               Container(
-                // height: 70,
+                height: 70,
                 width: 70,
                 margin: EdgeInsets.only(top: 165, left: MediaQuery.of(context).size.width*0.5-35),
                 child: FloatingActionButton(
@@ -86,13 +86,13 @@ class _MyHomePageState extends State<MyHomePage> {
               title: new TabBar(
                 tabs: [
                   Tab(
-                    icon: new Icon(Icons.calendar_today),
+                    icon: new Icon(Icons.calendar_today, size: 25),
                   ),
                   Tab(
-                    icon: new Icon(Icons.add_box_outlined),
+                    icon: new Icon(Icons.add_box_outlined, size: 30),
                   ),
                   Tab(
-                    icon: new Icon(Icons.dehaze),
+                    icon: new Icon(Icons.dehaze, size: 30),
                   ),
                 ],
                 labelColor: coral,

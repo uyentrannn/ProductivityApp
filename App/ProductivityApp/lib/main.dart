@@ -72,11 +72,16 @@ class _MyHomePageState extends State<MyHomePage> {
               Container(
                 height: 70,
                 width: 70,
-                margin: EdgeInsets.only(top: 165, left: MediaQuery.of(context).size.width*0.5-35),
+                margin: EdgeInsets.only(
+                    top: 165,
+                    left: MediaQuery.of(context).size.width * 0.5 - 35),
                 child: FloatingActionButton(
-                  child: Icon(Icons.add, size: 70,),
+                  child: Icon(
+                    Icons.add,
+                    size: 70,
+                  ),
                   backgroundColor: coral,
-                  onPressed: (){},
+                  onPressed: () {},
                 ),
               ),
             ]),

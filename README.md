@@ -63,6 +63,22 @@
 
 ## Classes
 
+* **User*
+
+  * String userID;
+
+  * String apiKey;
+
+  * String firstName;
+
+  * String lastName;
+
+  * String email;
+
+  * String password;
+
+    
+
 * **SupportFile:**
 
   * String text;
@@ -75,19 +91,19 @@
   * List<SupportFile> supportFiles;
   * String projectID;
   * String projectName;
-  * Date deadline
-  * Date reminder
+  * Date deadline;
+  * List<Date> reminder;
 
 
 
 * **Task:**
   * List<Task> tasks;
   * String note;
-  * Date timeToComplete;
+  * double timeToComplete;
   * bool completed;
   * String repeats;
   * Date deadline;
-  * Date reminder;
+  * List<Date> reminder;
 
 
 
